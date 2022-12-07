@@ -467,14 +467,18 @@ body {
 }
 
 /* 비주얼 */
-
+/* at sign role 선언하는것 */
 @keyframes moveEffect {
-  /*시작하는 시점과 끝나느 시점을 묶음 */
+  /*시작하는 시점과 끝나는 시점을 묶음 */
   0% {
     font-size: 12px;
+    color: rgba(0, 0, 0, 0.2);
+    transform: translate(0, 0);
   }
   100% {
     font-size: 24px;
+    color: rgba(0, 0, 0, 1);
+    transform: translate(400px, 75px);
   }
 }
 .visual {
@@ -482,8 +486,12 @@ body {
   height: 120px; /*광고영역은 높이를 고정한다 규정 때문에.*/
 }
 .visual-text {
+  position: relative;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   animation-name: moveEffect;
   animation-duration: 2000ms;
+  animation-fill-mode: forwards;
+  display: inline-block;
 }
 /* 메인 */
 .main {
