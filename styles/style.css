@@ -35,10 +35,10 @@ body {
   color: #212121;
   background: #ccc
     linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 70%, #fff 100%);
-  font-family: "Pretendard Variable", Pretendard, -apple-system,
-    BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
-    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-family: 'Pretendard Variable', Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI',
+    'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
 }
 
 /* 레이아웃 */
@@ -145,7 +145,7 @@ body {
 }
 
 .is-active .menu-button::after {
-  content: "";
+  content: '';
   display: block;
   border-top: 2px solid #000;
 }
@@ -180,8 +180,8 @@ body {
 }
 
 .sub-menu a::before {
-  content: "\e805";
-  font-family: "fontello";
+  content: '\e805';
+  font-family: 'fontello';
   font-weight: normal;
   display: inline-block;
   text-decoration: inherit;
@@ -198,7 +198,7 @@ body {
 
 .sub-menu a:hover::before,
 .sub-menu a:focus::before {
-  content: "\e801";
+  content: '\e801';
 }
 
 /* 비주얼 */
