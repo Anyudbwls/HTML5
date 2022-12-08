@@ -32,13 +32,15 @@ a {
 body {
   /* em, rem 단위를 사용해보기 */
   font-size: 1.4rem;
-  color: #212121;
-  background: #ccc
-    linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 70%, #fff 100%);
   font-family: 'Pretendard Variable', Pretendard, -apple-system,
     BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI',
     'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji',
     'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+  color: #212121;
+  /* background: #ccc
+    linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 70%, #fff 100%); */
+  background-color: yellow;
+  background-image: url(./images/ani_flower_01.png);
 }
 
 /* 레이아웃 */
@@ -472,17 +474,16 @@ body {
   /*시작하는 시점과 끝나는 시점을 묶음 */
   0% {
     font-size: 12px;
-    color: rgba(0, 0, 0, 0.2);
+    color: hsla(0, 0%, 0%, 0);
     transform: translate(0, 0);
   }
   100% {
     font-size: 24px;
-    color: rgba(0, 0, 0, 1);
+    color: hsla(0, 0%, 0%, 1);
     transform: translate(400px, 75px);
   }
 }
 .visual {
-  background: pink;
   height: 120px; /*광고영역은 높이를 고정한다 규정 때문에.*/
 }
 .visual-text {
