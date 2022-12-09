@@ -3,7 +3,8 @@
 @import url(./reset.css);
 
 /* 숨김 콘텐츠 */
-.a11y-hidden {
+.a11y-hidden,
+legend {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -224,6 +225,7 @@ body {
     transform: translate(400px, 75px);
   }
 }
+
 @keyframes fadeEffect {
   0% {
     opacity: 1;
@@ -232,16 +234,12 @@ body {
     opacity: 0;
   }
 }
+
 .visual {
   height: 120px;
   position: relative;
 }
 
-.visual-text {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  animation: moveEffect 400ms ease-in-out forwards;
-  position: absolute;
-}
 .visual::before,
 .visual::after {
   content: '';
@@ -249,23 +247,33 @@ body {
   width: 100%;
   height: 100%;
   top: 0;
-  bottom: 0;
-  animation: fadeEffect, 4000ms, infinite, alternate;
+  left: 0;
+  animation: fadeEffect 2000ms infinite alternate;
 }
+
 .visual::before {
-  background: url(./images/ani_flower_01.png) no-repeat 0 -10px,
-    url(./images/ani_flower_02.png) no-repeat 600px 0;
+  background: url('./images/ani_flower_01.png') no-repeat 0 -10px,
+    url('./images/ani_flower_02.png') no-repeat 600px 0;
 }
+
 .visual::after {
-  background: url(./images/ani_flower_03.png) no-repeat 300px 0,
-    url(./images/ani_flower_04.png) no-repeat 800px 0;
-  animation-delay: 2000ms;
+  background: url('./images/ani_flower_03.png') no-repeat 300px 0,
+    url('./images/ani_flower_04.png') no-repeat 800px 0;
+  animation-delay: 1000ms;
 }
+
+.visual-text {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  animation: moveEffect 400ms ease-in-out forwards;
+  position: relative;
+  z-index: 1;
+}
+
 /* 메인 */
 .main {
-  background: #fff;
-  min-height: 450vh;
   display: flow-root;
+  background: #fff;
+  min-height: 450px;
   padding: 30px 15px;
   border-radius: 15px 15px 0 0;
 }
@@ -276,47 +284,124 @@ body {
 }
 
 .group1 {
-  background: linear-gradient(to right, orangered, orange);
   width: 250px;
-  border-radius: 6px;
-  box-shadow: 5px 7px 0 rgb(134, 134, 134);
-  margin: 20px;
 }
+
 .group2 {
   background-color: salmon;
   width: 380px;
 }
+
 .group3 {
   background-color: gold;
   width: 190px;
 }
-/* 로그인  */
 
-h2 {
-  font-size: 18px;
-  margin: 4px;
-  font-weight: 700;
-  color: yellow;
-}
-
+/* 로그인 */
 .login {
-  padding: 12px;
-  font-size: 10px;
-}
-legend {
-  display: none;
-}
-form {
-  background-color: #fff;
-  border-radius: 6px 6px 0 0;
+  box-shadow: 5px 5px 0 0 #ccc;
+  background: orange radial-gradient(circle at right top, orange, orangered);
   padding: 10px;
-  display: flex;
+  border-radius: 5px;
+}
+
+.login-title {
+  color: #ff0;
+  font-size: 15px;
+  font-weight: 700;
+  text-indent: 10px;
+}
+
+.login-form {
+  background-color: #fff;
+  margin-top: 10px;
+  border-radius: 5px 5px 0 0;
+  padding: 10px 10px 0 10px;
+}
+
+.login-form fieldset {
+  position: relative;
+  border-bottom: 1px solid #aaa;
+  padding-bottom: 5px;
+}
+
+.user-email,
+.user-pw {
+  margin-bottom: 5px;
+}
+
+.login-form label {
+  display: inline-block;
+  width: 4em;
+}
+
+.login-form input {
+  width: 90px;
+  height: 24px;
+  border: 1px solid #aaa;
+  padding: 1px 1px 1px 5px;
+  border-radius: 3px;
+}
+
+.login-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 53px;
+  background-color: orangered;
+  color: #fff;
+  border: 0;
+  padding: 0 8px;
+  border-radius: 5px;
+  font-size: 13px;
 }
 
 .sign {
   background-color: #fff;
-  border-radius: 0 0 6px 6px;
-  border-top: 2px solid gray;
+  border-radius: 0 0 5px 5px;
+  padding: 4px 10px;
+}
+.sign li {
+  display: inline-block;
+}
+
+.sign li:first-child {
+  margin-right: 16px;
+}
+
+.sign a {
+  display: inline-block;
+  padding: 6px 0;
+  letter-spacing: -1px;
+}
+
+.sign a::before {
+  content: '\e803';
+  font-family: 'fontello';
+  color: orangered;
+  padding: 5px;
+}
+/* 유효성 검사 배너 */
+.validation-list {
+  margin-top: 25px;
+}
+
+.validation-list li {
+  margin-top: 10px;
+}
+.validation-list a {
+  display: block;
+  background: url('./images/validation_icon.png') no-repeat 25px 50%,
+    #ccc linear-gradient(to bottom, #ccc, #eee);
+  border: 1px solid gray;
+  text-align: center;
+  border-radius: 30px;
+  padding: 8px 15px;
+}
+
+.validation-list a:hover,
+.validation-list a:focus {
+  color: #f00;
 }
 /* 슬로건 */
 .slogan {
