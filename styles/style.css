@@ -505,7 +505,6 @@ body {
 }
 /* 공지사항 및 자료실 */
 .board {
-  background: yllow;
   margin-top: 20px;
   position: relative;
 }
@@ -556,6 +555,69 @@ body {
 }
 .icon-plus::before {
   color: hsla(110, 50%, 30%, 1);
+}
+/* 새소식 */
+
+.news {
+  margin-top: 20px;
+  position: relative;
+}
+.news::before {
+  position: absolute;
+  content: '';
+  top: 35px;
+  left: 0;
+  width: 80%;
+  height: 1px;
+  background: #ccc linear-gradient(to right, #ccc, #fff);
+}
+.news-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.news-item {
+  position: relative;
+  margin-top: 35px;
+  padding-left: 130px;
+}
+.news-item-title {
+  width: 250px;
+  position: relative;
+  font-weight: 600;
+}
+
+.news-item-date {
+  display: block;
+  margin: 5px 0 10px;
+}
+
+.news-item-brief {
+  background-color: #fff;
+}
+.news-item-thumbnail {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  text-align: center;
+}
+.news-item-thumbnail img {
+  box-shadow: 0 15px 10px 5px #ccc;
+}
+.news-more {
+  position: absolute;
+  right: -8px;
+  top: -8px;
+  padding: 8px;
+}
+/* 신규이벤트 및 관련 사이트  */
+.gradient-effect {
+  background: #ccc linear-gradient(to bottom, #ccc, #eee);
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+.accent-color {
+  color: #e85e2c;
 }
 /* 슬로건 */
 .slogan {
